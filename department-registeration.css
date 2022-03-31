@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(126, 126, 126);
+  font-family: "Cairo";
+}
+
+/*title of the page*/
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+/*information about user*/
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.name {
+  display: flex;
+  justify-items: space;
+}
+
+.id {
+  display: flex;
+}
+
+.info-type {
+}
+
+.info-data {
+  color: rgb(255, 255, 255);
+}
