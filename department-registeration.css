@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(126, 126, 126);
+  background-color: rgb(151, 151, 151);
   font-family: "Cairo";
 }
 
@@ -22,7 +22,6 @@ body {
 
 .name {
   display: flex;
-  justify-items: space;
 }
 
 .id {
@@ -34,4 +33,40 @@ body {
 
 .info-data {
   color: rgb(255, 255, 255);
+  margin-left: 8px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+#register {
+  width: 140px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(70, 70, 70);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "cairo";
+  text-align: center;
+  box-shadow: inset 0 0 0 0 rgb(200, 200, 200);
+  transition: all 0.3s ease-out;
+}
+
+#register:hover {
+  box-shadow: inset 140px 0 0 0 rgb(200, 200, 200);
+  color: black;
+  cursor: pointer;
+}
+
+#register:active {
+  box-shadow: inset 140px 0 0 0 rgb(255, 255, 255);
+  color: black;
+  cursor: pointer;
 }
