@@ -29,15 +29,38 @@
     </div>
     <div class="department">
         <h1>Choose a department</h1>
-        <!--TODO: add a drop down menu-->    
-        <input type="text" id="input" readonly
-        placeholder="select a department...">
+        <!--TODO: add a drop down menu-->
+        <div class="dropdown">
+            <input type="text" id="input"
+            placeholder="Choose a department...">
+            <div class="departments">
+                <div onclick="show('Artifical Intelegence')">Artifical Intelegence</div>
+                <div onclick="show('Computer Science')">Computer Science</div>
+                <div onclick="show('Decision Support')">Decision Support</div>
+                <div onclick="show('Information System')">Information System</div>
+                <div onclick="show('Information Technology')">Information Technology</div>
+            </div>
+        </div>
     </div>
-    <div class="buttons">
+    <div class="button">
         <button id='register'>Register <ion-icon name='save-outline'/></button>
     </div>
     <!--import icons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <!--some javascript to use the drop down menu-->
+    <script>
+        // change the text in the placeholder
+        function show(department) {
+            document.getElementById('input').placeholder = department;
+        }
+
+        // when the user clicks the drop down menu
+        let menu = document.querySelector('.dropdown')
+        menu.onclick = function() {
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

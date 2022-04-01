@@ -1,6 +1,7 @@
 body {
   background-color: rgb(151, 151, 151);
   font-family: "Cairo";
+  height: 100%;
 }
 
 /*title of the page*/
@@ -11,6 +12,7 @@ body {
 .title h1 {
   font-size: 40px;
   font-weight: 800;
+  margin-top: -10px;
 }
 
 /*information about user*/
@@ -18,6 +20,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: -40px;
 }
 
 .name {
@@ -28,20 +31,101 @@ body {
   display: flex;
 }
 
-.info-type {
-}
-
 .info-data {
   color: rgb(255, 255, 255);
   margin-left: 8px;
 }
 
-.buttons {
+/*this is for the selection of the department */
+.department {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  top: -30px;
+}
+
+.dropdown {
+  position: relative;
+  width: 300px;
+  height: 40px;
+}
+
+/*this is the icon to show the items of the list*/
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #000;
+  z-index: 10;
+  border-top-color: #fff;
+  border-right-color: #fff;
+  transform: rotate(-135deg);
+  transition: all 0.4s;
+}
+
+.dropdown.active::before {
+  transform: rotate(-45deg);
+}
+
+.dropdown input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  padding: 6px 10px;
+  font-size: 18px;
+  font-family: "cairo";
+  font-weight: bold;
+}
+
+.dropdown .departments {
+  position: absolute;
+  top: 60px;
+  left: 2px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  display: none;
+}
+
+.dropdown.active .departments {
+  display: block;
+}
+
+.dropdown .departments div {
+  padding: 12px 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown .departments div:hover {
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+}
+
+/*this is for the button*/
+.button {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: space-around;
-  margin-top: 100px;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
 }
 
 #register {
